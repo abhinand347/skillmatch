@@ -124,7 +124,7 @@ async function sendMessage() {
   const typingDiv = addMessage("", "bot", true);
 
   try {
-    const response = await fetch("https://skillmatch-1-alv6.onrender.com", {
+    const response = await fetch("https://skillmatch-1-alv6.onrender.com/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -196,4 +196,5 @@ function getRandom(arr) {
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") sendMessage();
 });
+
 
